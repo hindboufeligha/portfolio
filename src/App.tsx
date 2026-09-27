@@ -3,6 +3,8 @@ import SiteLayout from './components/layout/SiteLayout'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Projects from './components/sections/Projects'
+import Publications from './components/sections/Publications'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
@@ -17,11 +19,7 @@ function App() {
 
           <Projects />
 
-          <section id="publications" className="min-h-screen px-6 py-24">
-            <div className="mx-auto max-w-[var(--content-width)]">
-              <h2 className="text-4xl font-semibold">Publications</h2>
-            </div>
-          </section>
+          <Publications />
 
           <section id="skills" className="min-h-screen px-6 py-24">
             <div className="mx-auto max-w-[var(--content-width)]">
@@ -35,6 +33,8 @@ function App() {
             </div>
           </section>
         </main>
+
+        <Footer />
       </div>
     </SiteLayout>
   )
