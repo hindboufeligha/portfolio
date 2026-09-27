@@ -5,6 +5,7 @@ import About from './components/sections/About'
 import Projects from './components/sections/Projects'
 import Publications from './components/sections/Publications'
 import Footer from './components/layout/Footer'
+import Contact from './components/sections/Contact'
 
 function App() {
   return (
@@ -21,17 +22,7 @@ function App() {
 
           <Publications />
 
-          <section id="skills" className="min-h-screen px-6 py-24">
-            <div className="mx-auto max-w-[var(--content-width)]">
-              <h2 className="text-4xl font-semibold">Skills</h2>
-            </div>
-          </section>
-
-          <section id="contact" className="min-h-screen px-6 py-24">
-            <div className="mx-auto max-w-[var(--content-width)]">
-              <h2 className="text-4xl font-semibold">Contact</h2>
-            </div>
-          </section>
+          <Contact />
         </main>
 
         <Footer />

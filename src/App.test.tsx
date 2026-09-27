@@ -20,14 +20,14 @@ describe('App', () => {
       '#projects',
     )
 
-    expect(screen.getByRole('link', { name: 'Publications' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Research' })).toHaveAttribute(
       'href',
       '#publications',
     )
 
     expect(screen.getByRole('link', { name: 'Skills' })).toHaveAttribute(
       'href',
-      '#skills',
+      '#contact',
     )
 
     expect(screen.getByRole('link', { name: 'Contact' })).toHaveAttribute(

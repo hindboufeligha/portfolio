@@ -2,8 +2,8 @@ function Header() {
   const navigationItems = [
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Publications', href: '#publications' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Research', href: '#publications' },
+    { label: 'Skills', href: '#contact' },
     { label: 'Contact', href: '#contact' },
   ]
 
