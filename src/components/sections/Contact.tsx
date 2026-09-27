@@ -337,7 +337,7 @@ function Contact() {
             className="relative border-t p-8 sm:p-10 lg:border-l lg:border-t-0"
             style={{ borderColor: hairline }}
           >
-            <SectionHeading icon={<ChatBubble2/>}>
+            <SectionHeading icon={<ChatBubble2 />}>
               Let&apos;s connect
             </SectionHeading>
 
