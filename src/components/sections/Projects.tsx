@@ -35,12 +35,13 @@ function Projects() {
             >
               Projects
             </h2>
-
+            {/*
             <p className="mt-5 leading-8 text-[var(--color-muted)]">
               A selection of engineering and research projects exploring
               software development, machine learning, and data-intensive
               systems.
             </p>
+            */}
           </div>
 
           <div className="hidden shrink-0 gap-2 sm:flex">
