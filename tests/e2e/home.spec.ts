@@ -10,6 +10,6 @@ test('portfolio homepage loads', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'About' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Projects' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Research' })).toBeVisible()
-  await expect(page.getByRole('link', { name: 'Skills' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible()
 })

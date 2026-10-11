@@ -360,7 +360,7 @@ function Contact() {
               style={{ color: ink }}
             >
               <a href="mailto:hind.boufeligha@gmail.com" aria-label="Email">
-                <Envelope1 />
+                <Envelope1 fill="#b76e8a" />
               </a>
               <a
                 href="https://github.com/hindboufeligha"
@@ -368,7 +368,7 @@ function Contact() {
                 rel="noreferrer"
                 aria-label="GitHub"
               >
-                <Github />
+                <Github fill="#b76e8a" />
               </a>
               <a
                 href="https://www.linkedin.com/in/hindboufeligha/"
@@ -376,7 +376,7 @@ function Contact() {
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
-                <Linkedin />
+                <Linkedin fill="#b76e8a" />
               </a>
             </div>
 
