@@ -10,6 +10,11 @@ describe('App', () => {
       screen.getByRole('navigation', { name: 'Main navigation' }),
     ).toBeInTheDocument()
 
+    expect(screen.getByRole('link', { name: 'Home' })).toHaveAttribute(
+      'href',
+      '#hero',
+    )
+
     expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
       'href',
       '#about',

@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react'
+import { SunMoon } from 'lucide-react'
+import Linkedin from '../../styles/Linkedin'
+import Github from '../../styles/Github'
+import Envelope1 from '../../styles/Envelope1'
 
 const navigationItems = [
   { label: 'Home', href: '#hero', active: true },
@@ -54,7 +58,7 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-background)]/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[var(--content-width)] items-center justify-between px-6">
         <a
-          href="#hero"
+          href="#top"
           className="shrink-0 font-semibold tracking-tight"
           aria-label="Hind Boufeligha — home"
           onClick={() => setActiveItem('Home')}
@@ -68,7 +72,7 @@ function Header() {
               const isActive = activeItem === item.label
 
               return (
-                <li key={item.href}>
+                <li key={item.label}>
                   <a
                     href={item.href}
                     aria-current={item.active ? 'location' : undefined}
@@ -94,13 +98,58 @@ function Header() {
           </ul>
         </nav>
 
-        <button
-          type="button"
-          aria-label="Toggle theme"
-          className="shrink-0 rounded-full border border-[var(--color-border)] px-3 py-1.5 text-sm"
-        >
-          ◐
-        </button>
+        <div className="flex shrink-0 items-center gap-6">
+          <button
+            type="button"
+            aria-label="Toggle theme"
+            className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-muted)] transition-colors hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
+          >
+            <SunMoon aria-hidden="true" className="size-5" />
+          </button>
+
+          <span
+            aria-hidden="true"
+            className="h-6 w-px bg-[var(--color-border)]"
+          />
+
+          <div className="flex items-center gap-3">
+            <a
+              href="mailto:hind.boufeligha@gmail.com"
+              aria-label="Email"
+              className="group"
+            >
+              <Envelope1
+                width={20}
+                height={20}
+                className="text-[var(--color-muted)] hover:text-[#b76e8a] fill-current transition-colors duration-200"
+              />
+            </a>
+            <a
+              href="https://github.com/hindboufeligha"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <Github
+                width={20}
+                height={20}
+                className="text-[var(--color-muted)] hover:text-[#b76e8a] fill-current transition-colors duration-200"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hindboufeligha/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Linkedin
+                width={20}
+                height={20}
+                className="text-[var(--color-muted)] hover:text-[#b76e8a] fill-current transition-colors duration-200"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   )
