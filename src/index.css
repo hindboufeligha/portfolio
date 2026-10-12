@@ -3,13 +3,16 @@
 :root {
   --color-background: #fcfafb;
   --color-surface: #ffffff;
-  --color-foreground: #242126;
+  --color-foreground: #2c3242;
   --color-muted: #6f6872;
   --color-border: #e8e1e7;
 
   --color-accent: #b76e8a;
   --color-accent-soft: #f3e5eb;
   --color-accent-foreground: #ffffff;
+  --color-panel: #fdf7f6;
+  --color-panel-text: #8b8f9c;
+  --color-skill-pill: #f6e9ea;
 
   --font-sans:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -26,12 +29,15 @@
   --color-background: #171519;
   --color-surface: #211e22;
   --color-foreground: #f5f0f3;
-  --color-muted: #b8afb5;
+  --color-muted: #e9e1e6 /*#b8afb5*/;
   --color-border: #383238;
 
   --color-accent: #d18aa5;
   --color-accent-soft: #392831;
   --color-accent-foreground: #171519;
+  --color-panel: #211e22;
+  --color-panel-text: #b8afb5;
+  --color-skill-pill: #392831;
 }
 
 html {
