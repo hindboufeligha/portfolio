@@ -15,6 +15,18 @@ const navigationItems = [
 
 function Header() {
   const [activeItem, setActiveItem] = useState('Home')
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const savedTheme = localStorage.getItem('theme')
+
+    return savedTheme === 'dark' || savedTheme === 'light'
+      ? savedTheme
+      : 'light'
+  })
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   useEffect(() => {
     const sections = navigationItems
@@ -103,6 +115,11 @@ function Header() {
             type="button"
             aria-label="Toggle theme"
             className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-muted)] transition-colors hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
+            onClick={() =>
+              setTheme((currentTheme) =>
+                currentTheme === 'light' ? 'dark' : 'light',
+              )
+            }
           >
             <SunMoon aria-hidden="true" className="size-5" />
           </button>

@@ -6,14 +6,14 @@ import Envelope1 from '../../styles/Envelope1'
 import Rocket5 from '../../styles/Rocket5'
 import ChatBubble2 from '../../styles/ChatBubble2'
 
-const rose = '#b76e8a'
-const roseDeep = '#b76e8a'
-const pillBg = '#f6e9ea'
-const pillText = '#3d4351'
-const ink = '#2c3242'
-const muted = '#8b8f9c'
-const hairline = '#ece3e2'
-const panelBg = '#fdf7f6'
+const rose = 'var(--color-accent)'
+const pillBg = 'var(--color-skill-pill)'
+const pillText = 'var(--color-foreground)'
+const ink = 'var(--color-foreground)'
+const muted = 'var(--color-panel-text)'
+const hairline = 'var(--color-border)'
+// const panelBg = 'var(--color-surface)'
+const panelBg = 'var(--color-panel)'
 
 // keep this short:
 const skillHighlights: string[] = [
@@ -202,6 +202,7 @@ function SkillsModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div
+      // className="rounded-full p-1.5 transition-colors hover:bg-[var(--color-accent-soft)]"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
@@ -229,6 +230,7 @@ function SkillsModal({ onClose }: { onClose: () => void }) {
             onClick={onClose}
             aria-label="Close"
             className="rounded-full p-1.5 transition-colors hover:bg-black/5"
+            // className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4 backdrop-blur-sm"
             style={{ color: muted }}
           >
             <X size={18} />
@@ -349,10 +351,13 @@ function Contact() {
             <a
               href="#"
               className="mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13px] font-medium transition-opacity hover:opacity-90"
-              style={{ backgroundColor: roseDeep, color: '#ffffff' }}
+              style={{
+                backgroundColor: 'var(--color-accent)',
+                color: 'var(--color-accent-foreground)',
+              }}
             >
               Get in touch
-              <ArrowRight size={14} color="#ffffff" />
+              <ArrowRight size={14} color="var(--color-accent-foreground)" />
             </a>
 
             <div

@@ -2,6 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Restore the saved theme before rendering -->
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('theme')
+
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme
+        }
+      } catch {
+        // keep the default light theme if storage is unavailable
+      }
+    </script>
     <link
       rel="icon"
       type="image/png"
